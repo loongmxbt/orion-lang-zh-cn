@@ -21,11 +21,11 @@ i18n.map('zh-cn', {
       },
       password: {
         title: '密码',
-        new: '新密码',
+        new: '输入密码',
         confirm: '确认密码'
       },
       profile: {
-        name: '名称'
+        name: '用户名'
       }
     },
     index: {
