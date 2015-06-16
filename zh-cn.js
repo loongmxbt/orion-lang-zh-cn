@@ -1,4 +1,4 @@
-i18n.map('zh-cn', {
+i18n.map('zh-CN', {
   global: {
     save: '保存',
     create: '创建',
