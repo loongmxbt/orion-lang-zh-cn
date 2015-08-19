@@ -161,7 +161,10 @@ i18n.map('zh-CN', {
       noFile: '没有文件',
     },
     image: {
-      choose: '选择图片'
+      choose: '选择单张图片'
+    },
+    images: {
+      choose: '选择多张图片'
     }
   },
   tabular: {
@@ -177,4 +180,4 @@ i18n.map('zh-CN', {
       last: '最后页',
     }
   }
-})
+});
