@@ -13,9 +13,9 @@ orionjs:lang-en(default english language) does the initializations.
 
 ```js
 var language = window.navigator.userLanguage || window.navigator.language;
-    language = language.split('-')[0];
-    i18n.setLanguage(language);
-    T9n.setLanguage(language);
+language = language.split('-')[0];
+i18n.setLanguage(language);
+T9n.setLanguage(language);
 ```
 
 Because the language here is 'zh-CN', and will be spilited into 'zh',
@@ -30,14 +30,14 @@ if (Meteor.isClient) {
 
     // Set language zh-CN, zh_cn
     setLanguage = function() {
-	var i18nLang = window.navigator.userLanguage || window.navigator.language;
-	i18n.setLanguage(i18nLang);
-	t9nLang = i18nLang.replace('-','_').toLowerCase();
-	T9n.setLanguage(t9nLang);
+	   var i18nLang = window.navigator.userLanguage || window.navigator.language;
+	   i18n.setLanguage(i18nLang);
+	   t9nLang = i18nLang.replace('-','_').toLowerCase();
+	   T9n.setLanguage(t9nLang);
     }
 
     Meteor.startup(function () {
-	setLanguage();
+	   setLanguage();
     })
 
 }
