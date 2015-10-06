@@ -11,7 +11,7 @@ or leave it to the orionjs.
 
 orionjs:lang-en(default english language) does the initializations.
 
-```js orion/packages/lang-en/init.js
+```js
 var language = window.navigator.userLanguage || window.navigator.language;
     language = language.split('-')[0];
     i18n.setLanguage(language);
@@ -25,20 +25,20 @@ And for T9n, the Simplified Chinese is set by `T9n.setLanguage('zh_cn')`.
 
 Here is init of i18n example.
 
-```js lib/config.js
+```js
 if (Meteor.isClient) {
 
-	// Set language zh-CN, zh_cn
-	setLanguage = function() {
-		var i18nLang = window.navigator.userLanguage || window.navigator.language;
-		i18n.setLanguage(i18nLang);
-		t9nLang = i18nLang.replace('-','_').toLowerCase();
-		T9n.setLanguage(t9nLang);
-	}
+    // Set language zh-CN, zh_cn
+    setLanguage = function() {
+	var i18nLang = window.navigator.userLanguage || window.navigator.language;
+	i18n.setLanguage(i18nLang);
+	t9nLang = i18nLang.replace('-','_').toLowerCase();
+	T9n.setLanguage(t9nLang);
+    }
 
-	Meteor.startup(function () {
-		setLanguage();
-	})
+    Meteor.startup(function () {
+	setLanguage();
+    })
 
 }
 ```
